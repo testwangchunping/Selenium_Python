@@ -1,4 +1,4 @@
-#!H:\Selenium_Python2\venv\Scripts\python.exe
+#!H:\1\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==10.0.1','console_scripts','pip3.4'
 __requires__ = 'pip==10.0.1'
 import re

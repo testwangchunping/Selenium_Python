@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=F:\Selenium_Python\venv"
+set "VIRTUAL_ENV=H:\1\venv"
 
 if not defined PROMPT (
     set "PROMPT=$P$G"

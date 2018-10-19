@@ -1,4 +1,4 @@
-#!H:\Selenium_Python2\venv\Scripts\python.exe
+#!H:\1\venv\Scripts\python.exe
 # EASY-INSTALL-ENTRY-SCRIPT: 'setuptools==39.1.0','console_scripts','easy_install-3.4'
 __requires__ = 'setuptools==39.1.0'
 import re

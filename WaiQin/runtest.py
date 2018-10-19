@@ -6,7 +6,7 @@ import unittest
 # 设置报告文件保存路径
 report_path = './' + 'Report/'
 # 设置执行用例路径
-suites_path = './' + '/src/test_case'
+suites_path = './' + '/test_case'
 # 设置报告名
 report_name = 'Report.html'
 # 设置报告标题
