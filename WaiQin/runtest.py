@@ -1,12 +1,14 @@
 # coding=utf-8
 from WaiQin.Tools.HTMLTestRunner_PY3 import HTMLTestRunner
+from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 import time
 import unittest
 
+readConfig = ReadConfigFile()
 # 设置报告文件保存路径
-report_path = './' + 'Report/'
+report_path = readConfig.report_path
 # 设置执行用例路径
-suites_path = './' + '/test_case'
+suites_path = readConfig.suites_path
 # 设置报告名
 report_name = 'Report.html'
 # 设置报告标题

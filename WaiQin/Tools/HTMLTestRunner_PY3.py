@@ -862,7 +862,7 @@ class HTMLTestRunner(Template_mixin):
         doc = t.shortDescription() or ""
         desc = doc and ('%s: %s' % (name, doc)) or name
         picname = doc and ('%s' % name) or name
-        picno = pid + 1
+        picno = pid
         tmpl = has_output and self.REPORT_TEST_WITH_OUTPUT_TMPL or self.REPORT_TEST_NO_OUTPUT_TMPL
 
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
@@ -876,7 +876,7 @@ class HTMLTestRunner(Template_mixin):
             style=(n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none')),
             desc=desc,
             script=script,
-            picno=picno,
+            picno=picno + 1,
             picname=picname,
             status=self.STATUS[n],
         )

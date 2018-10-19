@@ -7,6 +7,8 @@ from WaiQin.frame.screenshoot import get_window_img
 from WaiQin.src.wq_import_export.data_process.read_old_import import ReadOldImport
 from WaiQin.frame.browser_engine import BrowserEngine
 from WaiQin.src.wq_import_export.service.login import TestLogin
+from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
+from WaiQin.frame.view_screenshots import view_screenshots
 
 
 class TestImport(unittest.TestCase):
@@ -19,7 +21,7 @@ class TestImport(unittest.TestCase):
         cls.driver = BrowserEngine().get_browser()
         cls.logger = Logger(logger='Import').getlog()
         TestLogin(cls.driver, cls.logger).test_login()
-        cls.num = 0
+    num = 0
 
     @classmethod
     def tearDownClass(cls):
@@ -33,20 +35,19 @@ class TestImport(unittest.TestCase):
         ReadOldImport(self.driver, self.logger).read_old_import()
         # 截图
         name = sys._getframe().f_code.co_name
-        num = self.num + 1
-        print('用例数量' + str(num))
-        get_window_img(self, self.logger, name, str(num))  # 最后一项为图片第几张
+        TestImport.num = self.num + 1
+        get_window_img(self, self.logger, name, str(TestImport.num))  # 最后一项为图片第几张
 
     def test_new_import(self):
         """
         重构模块导入
         """
+
         ReadNewImport(self.driver, self.logger).read_new_import()
         # 截图
         name = sys._getframe().f_code.co_name
-        num = self.num + 1
-        print('用例数量' + str(num))
-        get_window_img(self, self.logger, name, str(num))  # 最后一项为图片第几张
+        TestImport.num = self.num + 1
+        get_window_img(self, self.logger, name, str(TestImport.num))  # 最后一项为图片第几张
 
     if __name__ == '__main__':
         unittest.main

@@ -126,7 +126,9 @@ class Export(object):
                 max_time = datetime.datetime.strftime(t_max, '%Y-%m-%d')
                 min_time = datetime.datetime.strftime(t_min, '%Y-%m-%d')
                 self.driver.find_element(By.ID, 'min_time').send_keys(min_time)
+                time.sleep(1)
                 self.driver.find_element(By.ID, 'max_time').send_keys(max_time)
+                time.sleep(1)
                 self.driver.find_element(*self.new_export_id31).click()
                 try:
                     # webdriver显示等待：WebDriverWait

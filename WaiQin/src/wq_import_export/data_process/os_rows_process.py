@@ -1,7 +1,9 @@
 import time
+from selenium.webdriver.common.by import By
 
 
 class OsRowsProcess(object):
+
     def __init__(self, module_list, driver, logger):
         self.module_list = module_list
         self.driver = driver
@@ -12,17 +14,17 @@ class OsRowsProcess(object):
     def os_rows_process(self):
         get_module_name = ''
         try:
-            if (self.module_list[0] == self.module_list[1]):
-                self.driver.find_element_by_link_text(self.module_list[0]).click()
+            if self.module_list[0] == self.module_list[1]:
+                self.driver.find_element(By.LINK_TEXT, self.module_list[0]).click()
                 time.sleep(1)
-                self.driver.find_elements_by_link_text(self.module_list[0])[1].click()
+                self.driver.find_elements(By.LINK_TEXT, self.module_list[0])[1].click()
                 time.sleep(1)
         except:
             pass
         for name in self.module_list:
             get_module_name = name
             # try:
-            self.driver.find_element_by_link_text(name).click()
+            self.driver.find_element(By.LINK_TEXT, name).click()
             time.sleep(1)
             # except:
             #     self.logger.warning(get_module_name+'导航栏名称配置错误')
@@ -36,17 +38,17 @@ class OsRowsProcess(object):
     def os_rows_process_new(self):
         get_module_name = ''
         try:
-            if (self.module_list[0] == self.module_list[1]):
-                self.driver.find_element_by_link_text(self.module_list[0]).click()
+            if self.module_list[0] == self.module_list[1]:
+                self.driver.find_element(By.LINK_TEXT, self.module_list[0]).click()
                 time.sleep(1)
-                self.driver.find_elements_by_link_text(self.module_list[0])[1].click()
+                self.driver.find_elements(By.LINK_TEXT, self.module_list[0])[1].click()
                 time.sleep(1)
         except:
             pass
         for name in self.module_list:
             get_module_name = name
             # try:
-            self.driver.find_element_by_link_text(name).click()
+            self.driver.find_element(By.LINK_TEXT, name).click()
             time.sleep(1)
             # except:
             #     self.logger.warning(get_module_name+'导航栏名称配置错误')

@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from WaiQin.frame.screenshoot import get_window_img
-from WaiQin.Config.read_config_file import ReadConfigFile
+from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 from WaiQin.frame.is_element_exist import IsElementExist
 
 
@@ -16,8 +16,6 @@ class WqImport(object):
         self.logger = logger
         self.module_name = module_name
 
-    readConfig = ReadConfigFile()
-
     # import_module_name,导入文件应该以模块名命名规则
     # 1、奇数列为空，即列表中无table切换，导入文件名为“最后一个link_text导航栏名”；
     # 2、奇数列不为空，即列表中有table切换，导入文件名为“切换的table的名字”）
@@ -25,7 +23,8 @@ class WqImport(object):
     iframe_name = 'app_iframe'
     # 导入失败的提示
     error_message = '没有可导入的文件、导入文件名错误、导入失败或请求超时'
-    file_path = os.path.abspath('.') + '\\src\\wq_import_export\\data\\'
+    readConfig = ReadConfigFile()
+    file_path = os.path.abspath('.')+readConfig.import_data_filepath
     # 导入按钮
     import_text = '导入'
 
@@ -44,12 +43,12 @@ class WqImport(object):
 
     def test_old_import(self):
         iee = IsElementExist(self.driver)
-        if iee.is_element_exist(By.PARTIAL_LINK_TEXT,self.import_text):
-            elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT,self.import_text)
+        if iee.is_element_exist(By.PARTIAL_LINK_TEXT, self.import_text):
+            elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT, self.import_text)
             number = len(elements)
             for self.id in range(number):
                 time.sleep(2)
-                elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT,self.import_text)
+                elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT, self.import_text)
                 text = elements[self.id].text
                 elements[self.id].click()
                 time.sleep(2)
@@ -61,8 +60,10 @@ class WqImport(object):
                 try:
                     if number == 1:
                         import_file = self.file_path + self.module_name + '.xls'
+                        print('导入文件地址'+import_file)
                     else:
                         import_file = self.file_path + self.module_name + str(self.id + 1) + '.xls'
+                        print('导入文件地址'+import_file)
                     self.driver.find_element(*self.import_file_button1).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button1).click()

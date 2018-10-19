@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from WaiQin.Config.read_config_file import ReadConfigFile
+from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 from WaiQin.frame.web_element_wait import WebElementWait
 
 

@@ -1,7 +1,7 @@
 # coding=utf-8
 import xlrd
 from WaiQin.src.wq_import_export.data_process.os_rows_process import OsRowsProcess
-from WaiQin.Config.read_config_file import ReadConfigFile
+from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 from WaiQin.src.wq_import_export.data_process.js_rows_process import JsRowsProcess
 from WaiQin.src.wq_import_export.service.export import Export
 
@@ -14,8 +14,8 @@ class ReadNewExport(object):
     readConfig = ReadConfigFile()
 
     def test_new_export(self):
-        file_path = './' + 'src/wq_import_export/data/read_file2.xlsx'
-        sheet_name = 'new_export'
+        file_path = self.readConfig.port_data_filepath
+        sheet_name = self.readConfig.new_export_sheet
         # 打开excel
         workbook = xlrd.open_workbook(file_path)
         DataSheet = workbook.sheet_by_name(sheet_name)

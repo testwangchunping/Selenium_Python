@@ -26,7 +26,7 @@ class JsRowsProcess(object):
         except:
             pass
         try:
-            self.driver.find_element_(*self.change_table_xpath3.format(self.j + 1)).click()
+            self.driver.find_element(*self.change_table_xpath3.format(self.j + 1)).click()
         except:
             pass
         time.sleep(1)
@@ -38,15 +38,15 @@ class JsRowsProcess(object):
         # 奇数行、非空数据处理
         module_name = self.module_list[self.j]
         try:
-            self.driver.find_element_by_xpath(self.change_table_xpath1.format(self.j + 1)).click()
+            self.driver.find_element(*self.change_table_xpath1.format(self.j + 1)).click()
         except:
             pass
         try:
-            self.driver.find_element_by_xpath(self.change_table_xpath2.format(self.j + 1)).click()
+            self.driver.find_element(*self.change_table_xpath2.format(self.j + 1)).click()
         except:
             pass
         try:
-            self.driver.find_element_by_xpath(self.change_table_xpath3.format(self.j + 1)).click()
+            self.driver.find_element(*self.change_table_xpath3.format(self.j + 1)).click()
         except:
             pass
         try:
