@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
-from WaiQin.frame.web_element_wait import WebElementWait
+from WaiQin.frame.webElementWait import webElementWait
 
 
 class LoginPage(object):
@@ -28,7 +28,8 @@ class LoginPage(object):
 
     def login_wait(self):
         try:
-            tips = WebElementWait(self.driver).web_element_wait(5, 1, By.CLASS_NAME, self.error_tips)
+            # webdriver显示等待：webElementWait
+            tips = webElementWait(self.driver, By.CLASS_NAME, self.error_tips)
             self.logger.warning(tips)
         except:
             pass

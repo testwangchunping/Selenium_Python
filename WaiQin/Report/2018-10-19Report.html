@@ -200,9 +200,9 @@
         
     <div class='page-header'>
         <h1>项目导入导出测试报告</h1>
-    <p class='attribute'><strong>开始时间:</strong> 2018-10-19 18:23:31</p>
-<p class='attribute'><strong>运行时长:</strong> 0:00:19.327054</p>
-<p class='attribute'><strong>状态:</strong> 通过 4</p>
+    <p class='attribute'><strong>开始时间:</strong> 2018-10-19 13:22:42</p>
+<p class='attribute'><strong>运行时长:</strong> 5:07:12.550403</p>
+<p class='attribute'><strong>状态:</strong> 通过 1 错误 1</p>
 
     </div>
     <div style="float: left;width:50%;"><p class='description'>用例测试情况</p></div>
@@ -233,76 +233,27 @@
             <td>查看</td>
         </tr>
         
-    <tr class='passClass'>
-        <td>test_export.TestExport</td>
+    <tr class='errorClass'>
+        <td>test_import.TestImport</td>
         <td>2</td>
-        <td>2</td>
+        <td>1</td>
         <td>0</td>
-        <td>0</td>
+        <td>1</td>
         <td><a href="javascript:showClassDetail('c1',2)">详情</a></td>
     </tr>
 
 <tr id='pt1.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_new_export</div></td>
+    <td class='none'><div class='testcase'>test_new_import</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.1')" >
         通过</a>
-    <a class="popup_link" onfocus='this.blur();' href="../Screenshots/test_new_export1.jpg" target='_block'>
-        点击查看截图test_new_export1</a>
-
-    <div id='div_pt1.1' class="popup_window">
-        <pre>pt1.1: ./Screenshots/test_new_export1.jpg
-H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py:1031: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
-  "type. It should end with a `.png` extension", UserWarning)
-</pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-<tr id='pt1.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_old_export</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt1.2')" >
-        通过</a>
-    <a class="popup_link" onfocus='this.blur();' href="../Screenshots/test_old_export2.jpg" target='_block'>
-        点击查看截图test_old_export2</a>
-
-    <div id='div_pt1.2' class="popup_window">
-        <pre>pt1.2: ./Screenshots/test_old_export2.jpg
-</pre>
-    </div>
-    <!--css div popup end-->
-
-    </td>
-</tr>
-
-    <tr class='passClass'>
-        <td>test_import.TestImport</td>
-        <td>2</td>
-        <td>2</td>
-        <td>0</td>
-        <td>0</td>
-        <td><a href="javascript:showClassDetail('c2',2)">详情</a></td>
-    </tr>
-
-<tr id='pt2.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_new_import</div></td>
-    <td colspan='5' align='center'>
-
-    <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.1')" >
-        通过</a>
     <a class="popup_link" onfocus='this.blur();' href="../Screenshots/test_new_import1.jpg" target='_block'>
         点击查看截图test_new_import1</a>
 
-    <div id='div_pt2.1' class="popup_window">
-        <pre>pt2.1: ./Screenshots/test_new_import1.jpg
+    <div id='div_pt1.1' class="popup_window">
+        <pre>pt1.1: 新导入./src/wq_import_export/data/
 </pre>
     </div>
     <!--css div popup end-->
@@ -310,18 +261,38 @@ H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py
     </td>
 </tr>
 
-<tr id='pt2.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test_old_import</div></td>
+<tr id='ft1.2' class='none'>
+    <td class='errorCase'><div class='testcase'>test_old_import</div></td>
     <td colspan='5' align='center'>
 
     <!--css div popup start-->
-    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_pt2.2')" >
-        通过</a>
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.2')" >
+        错误</a>
     <a class="popup_link" onfocus='this.blur();' href="../Screenshots/test_old_import2.jpg" target='_block'>
         点击查看截图test_old_import2</a>
 
-    <div id='div_pt2.2' class="popup_window">
-        <pre>pt2.2: ./Screenshots/test_old_import2.jpg
+    <div id='div_ft1.2' class="popup_window">
+        <pre>ft1.2: 旧导入./src/wq_import_export/data/
+./src/wq_import_export/data/
+导入文件地址./src/wq_import_export/data/员工管理.xls
+./Screenshots/test_old_import1.jpg
+H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py:1031: UserWarning: name used for saved screenshot does not match file type. It should end with a `.png` extension
+  "type. It should end with a `.png` extension", UserWarning)
+Traceback (most recent call last):
+  File "H:\Selenium_Python\WaiQin\testcase\test_import.py", line 37, in test_old_import
+    name = sys._getframe().f_code.co_name
+  File "H:\Selenium_Python\WaiQin\src\wq_import_export\data_process\read_old_import.py", line 57, in read_old_import
+    self.driver.get(self.readConfig.f5_url)
+  File "H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 333, in get
+    self.execute(Command.GET, {'url': url})
+  File "H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 321, in execute
+    self.error_handler.check_response(response)
+  File "H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 242, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=69.0.3497.100)
+  (Driver info: chromedriver=2.36.540470 (e522d04694c7ebea4ba8821272dbef4f9b818c91),platform=Windows NT 10.0.14393 x86_64)
+
 </pre>
     </div>
     <!--css div popup end-->
@@ -331,10 +302,10 @@ H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py
 
         <tr id='total_row'>
             <td>总计</td>
-            <td>4</td>
-            <td>4</td>
+            <td>2</td>
+            <td>1</td>
             <td>0</td>
-            <td>0</td>
+            <td>1</td>
             <td>&nbsp;</td>
         </tr>
     </table>
@@ -368,15 +339,29 @@ H:\Selenium_Python\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py
                     radius : '60%',
                     center: ['50%', '60%'],
                     data:[
-                        {value:4, name:'通过'},
+                        {value:1, name:'通过'},
                         {value:0, name:'失败'},
-                        {value:0, name:'错误'}
+                        {value:1, name:'错误'}
                     ],
                     itemStyle: {
                         emphasis: {
                             shadowBlur: 10,
                             shadowOffsetX: 0,
                             shadowColor: 'rgba(0, 0, 0, 0.5)'
+                        }
+                    }
+                }
+            ]
+        };
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+    </script>
+    
+    </div>
+</body>
+</html>
+0, 0, 0, 0.5)'
                         }
                     }
                 }

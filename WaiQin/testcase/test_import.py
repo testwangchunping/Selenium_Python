@@ -7,8 +7,6 @@ from WaiQin.frame.screenshoot import get_window_img
 from WaiQin.src.wq_import_export.data_process.read_old_import import ReadOldImport
 from WaiQin.frame.browser_engine import BrowserEngine
 from WaiQin.src.wq_import_export.service.login import TestLogin
-from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
-from WaiQin.frame.view_screenshots import view_screenshots
 
 
 class TestImport(unittest.TestCase):
@@ -21,6 +19,7 @@ class TestImport(unittest.TestCase):
         cls.driver = BrowserEngine().get_browser()
         cls.logger = Logger(logger='Import').getlog()
         TestLogin(cls.driver, cls.logger).test_login()
+
     num = 0
 
     @classmethod
@@ -32,7 +31,15 @@ class TestImport(unittest.TestCase):
         """
         未重构模块导入
          """
+
+        self.logger.info('开始导出了--------------old_import')
         ReadOldImport(self.driver, self.logger).read_old_import()
+        self.logger.info('结束导出了--------------old_import')
+
+        self.logger.info('开始导出了--------------old_import1')
+        ReadOldImport(self.driver, self.logger).read_old_import1()
+        self.logger.info('结束导出了--------------old_import1')
+
         # 截图
         name = sys._getframe().f_code.co_name
         TestImport.num = self.num + 1
@@ -42,8 +49,14 @@ class TestImport(unittest.TestCase):
         """
         重构模块导入
         """
-
+        self.logger.info('开始导出了--------------new_import')
         ReadNewImport(self.driver, self.logger).read_new_import()
+        self.logger.info('结束导出了--------------new_import')
+
+        self.logger.info('开始导出了--------------new_import1')
+        ReadNewImport(self.driver, self.logger).read_new_import1()
+        self.logger.info('结束导出了--------------new_import1')
+
         # 截图
         name = sys._getframe().f_code.co_name
         TestImport.num = self.num + 1

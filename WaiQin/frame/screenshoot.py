@@ -3,6 +3,7 @@ from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 
 
 def get_window_img(self, logger, img_name, num):
+
     readConfig = ReadConfigFile()
     img_path = readConfig.img_path + img_name + str(num) + '.jpg'
     print(img_path)

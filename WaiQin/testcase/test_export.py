@@ -7,7 +7,6 @@ from WaiQin.frame.logger import Logger
 from WaiQin.src.wq_import_export.data_process.read_old_export import ReadOldExport
 from WaiQin.frame.browser_engine import BrowserEngine
 from WaiQin.src.wq_import_export.service.login import TestLogin
-from WaiQin.frame.view_screenshots import view_screenshots
 
 
 class TestExport(unittest.TestCase):
@@ -30,7 +29,13 @@ class TestExport(unittest.TestCase):
         """
         旧的模块导出
         """
+        self.logger.info('开始导出了--------------old_export')
         ReadOldExport(self.driver, self.logger).test_old_export()
+        self.logger.info('结束导出了--------------old_export')
+
+        self.logger.info('开始导出了--------------old_export1')
+        ReadOldExport(self.driver, self.logger).test_old_export1()
+        self.logger.info('结束导出了--------------old_export1')
         # 截图
         name = sys._getframe().f_code.co_name
         TestExport.num = self.num + 1
@@ -40,7 +45,13 @@ class TestExport(unittest.TestCase):
         """
         重构模块的导出
         """
+        self.logger.info('开始导出了--------------new_export')
         ReadNewExport(self.driver, self.logger).test_new_export()
+        self.logger.info('结束导出了--------------new_export')
+
+        self.logger.info('开始导出了--------------new_export1')
+        ReadNewExport(self.driver, self.logger).test_new_export1()
+        self.logger.info('结束导出了--------------new_export1')
         # 截图
         name = sys._getframe().f_code.co_name
         TestExport.num = self.num + 1

@@ -1,9 +1,12 @@
 # coding=utf-8
-import xlrd
-from WaiQin.src.wq_import_export.data_process.juge_old_export import JugeOldExport
-from WaiQin.src.wq_import_export.data_process.os_rows_process import OsRowsProcess
+from WaiQin.frame.go_homepage import go_Homepage
+from WaiQin.frame.delete_blank import delete_blank
+from WaiQin.frame.open_excel import open_excel
+from WaiQin.frame.iframe_skip import iframe_skip
+from WaiQin.src.wq_import_export.data_process.change_navigate import change_navigate
 from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
-from WaiQin.src.wq_import_export.data_process.js_rows_process import JsRowsProcess
+from WaiQin.src.wq_import_export.data_process.change_table import change_table
+from WaiQin.src.wq_import_export.data_process.juge_old_export import JugeOldExport
 
 
 class ReadOldExport(object):
@@ -13,47 +16,47 @@ class ReadOldExport(object):
 
     readConfig = ReadConfigFile()
 
+    # 新导出，无table项
     def test_old_export(self):
         file_path = self.readConfig.port_data_filepath
         sheet_name = self.readConfig.old_export_sheet
-        # 打开excel
-        workbook = xlrd.open_workbook(file_path)
-        DataSheet = workbook.sheet_by_name(sheet_name)
-        rowNum = DataSheet.nrows  # sheet行数
-        i = 0
-        last_module_name = ''
-        count = rowNum
+        # 打开excel文件的具体sheet
+        DataSheet = open_excel(file_path, sheet_name)
+        # sheet行数
+        rowNum = DataSheet.nrows
         for i in range(rowNum):
             module = DataSheet.row_values(i)
-            while '' in module:
-                module.remove('')
-            module_list = module
-            # 偶数行（通过link_text获取的模块链接）数据处理
-            if i % 2 == 0:
-                # 偶数行数据处理
-                last_module_name = OsRowsProcess(module_list, self.driver, self.logger).os_rows_process()
-            elif i % 2 == 1 and module_list:
-                # 奇数行、非空数据处理
-                for j in range(len(module_list)):
-                    get_module_name = JsRowsProcess(module_list, j, self.driver).js_rows_process()
-                    # 判断导出照片、导出
-                    JugeOldExport(self.driver, self.logger, get_module_name).juge_old_export()
-            else:
-                # 奇数行、空数据处理
-                get_module_name = last_module_name
-                # 判断导出照片、导出
-                JugeOldExport(self.driver, self.logger, get_module_name).juge_old_export()
-            i = i + 1
-            if i % 2 == 0:
-                # 页面刷新到首页
-                self.driver.get(self.readConfig.f5_url)
-        if i % 2 == 1 and i == count:
-            # 处理最后一行为偶数的数据(即页面无table切换)
-            JugeOldExport(self.driver, self.logger, last_module_name).juge_old_export()
+            # 去掉字符串中的空格
+            module_list = delete_blank(module)
+            # 导航栏点击
+            module_name = change_navigate(module_list, self.driver)
+            # 导出照片、导出
+            JugeOldExport(self.driver, self.logger, module_name).juge_old_export()
             # 页面刷新到首页
-            self.driver.get(self.readConfig.f5_url)
-        if i == 0 and i == count:
-            # 处理最后一行为偶数（0）的数据(即页面无table切换)
-            JugeOldExport(self.driver, self.logger, last_module_name).juge_old_export()
+            go_Homepage(self.driver)
+
+    # 新导出，有table项
+    def test_old_export1(self):
+        file_path = self.readConfig.port_data_filepath
+        sheet_name = self.readConfig.old_export_sheet1
+        # 打开excel文件的具体sheet
+        DataSheet = open_excel(file_path, sheet_name)
+        # sheet行数
+        rowNum = DataSheet.nrows
+        for i in range(rowNum):
+            module = DataSheet.row_values(i)
+            module_start = module[0:2]
+            module_end = module[2:]
+            # 去掉字符串中的空格
+            module_start = delete_blank(module_start)  # 导航栏
+            module_end = delete_blank(module_end)  # table栏
+            # 导航栏点击
+            module_name = change_navigate(module_start, self.driver)
+            num = len(module_end)
+            for j in range(num):
+                # 切换table
+                module_name = change_table(module_end, j, self.driver)
+                # 导出照片、导出
+                JugeOldExport(self.driver, self.logger, module_name).juge_old_export()
             # 页面刷新到首页
-            self.driver.get(self.readConfig.f5_url)
+            go_Homepage(self.driver)

@@ -17,15 +17,24 @@ class ReadConfigFile(object):
 
     # 读取文件目录
     port_data_filepath = config.get('filePath', 'port_data_filepath')
+
     new_export_sheet = config.get('filePath', 'new_export_sheet')
+    new_export_sheet1 = config.get('filePath', 'new_export_sheet1')
+
     old_export_sheet = config.get('filePath', 'old_export_sheet')
+    old_export_sheet1 = config.get('filePath', 'old_export_sheet1')
+
     new_import_sheet = config.get('filePath', 'new_import_sheet')
+    new_import_sheet1 = config.get('filePath', 'new_import_sheet1')
+
     old_import_sheet = config.get('filePath', 'old_import_sheet')
+    old_import_sheet1 = config.get('filePath', 'old_import_sheet1')
+
     import_data_filepath = config.get('filePath', 'import_data_filepath')
     img_path = config.get('filePath', 'img_path')
     log_path = config.get('filePath', 'log_path')
     report_path = config.get('filePath', 'report_path')
     suites_path = config.get('filePath', 'suites_path')
-    chromedriver_path=config.get('filePath','chromedriver_path')
+    chromedriver_path = config.get('filePath', 'chromedriver_path')
     firefoxdriver_path = config.get('filePath', 'firefoxdriver_path')
     iedriver_path = config.get('filePath', 'iedriver_path')

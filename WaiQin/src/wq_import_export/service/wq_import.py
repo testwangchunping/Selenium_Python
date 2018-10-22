@@ -1,13 +1,12 @@
 # coding=utf-8
 import os
-import sys
 import time
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from WaiQin.frame.screenshoot import get_window_img
 from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
+from WaiQin.frame.iframe_skip import iframe_skip
 from WaiQin.frame.is_element_exist import IsElementExist
+from WaiQin.frame.webElementWait import webElementWait
+from WaiQin.frame.go_homepage import go_Homepage
 
 
 class WqImport(object):
@@ -20,22 +19,21 @@ class WqImport(object):
     # 1、奇数列为空，即列表中无table切换，导入文件名为“最后一个link_text导航栏名”；
     # 2、奇数列不为空，即列表中有table切换，导入文件名为“切换的table的名字”）
 
-    iframe_name = 'app_iframe'
     # 导入失败的提示
     error_message = '没有可导入的文件、导入文件名错误、导入失败或请求超时'
     readConfig = ReadConfigFile()
-    file_path = os.path.abspath('.')+readConfig.import_data_filepath
+    file_path = os.path.abspath('.') + readConfig.import_data_filepath
     # 导入按钮
     import_text = '导入'
 
     # 文件上传按钮
-    import_file_button1 = (By.ID, 'upload-file')   # xls格式文件
-    import_file_button2 = (By.NAME, 'file')    # zip格式文件
+    import_file_button1 = (By.ID, 'upload-file')  # xls格式文件
+    import_file_button2 = (By.NAME, 'file')  # zip格式文件
     # 确认导入按钮
-    confirm_button1 = (By.ID, 'OK-Button')    # xls格式文件
-    confirm_button2 = (By.ID, 'save_button')   # zip格式文件
+    confirm_button1 = (By.ID, 'OK-Button')  # xls格式文件
+    confirm_button2 = (By.ID, 'save_button')  # zip格式文件
     # 导入成功的提示
-    import_success_message = (By.XPATH, '//*[@id="task_body"]/div/div[1]/span[1]')
+    import_success_message = '//*[@id="task_body"]/div/div[1]/span[1]'
     # 导入成功后，返回上一级按钮
     import_success_button = (By.XPATH, '//*[@id="task_body"]/div/div[1]/a')
     # 返回上级按钮
@@ -52,18 +50,15 @@ class WqImport(object):
                 text = elements[self.id].text
                 elements[self.id].click()
                 time.sleep(2)
-                try:
-                    self.driver.switch_to.frame(self.iframe_name)
-                except:
-                    pass
-                print(self.file_path)
+
+                # iframe跳转
+                iframe_skip.iframe_enter(self.driver)
+
                 try:
                     if number == 1:
                         import_file = self.file_path + self.module_name + '.xls'
-                        print('导入文件地址'+import_file)
                     else:
                         import_file = self.file_path + self.module_name + str(self.id + 1) + '.xls'
-                        print('导入文件地址'+import_file)
                     self.driver.find_element(*self.import_file_button1).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button1).click()
@@ -80,22 +75,18 @@ class WqImport(object):
                 except:
                     pass
                 try:
-                    # webdriver显示等待：WebDriverWait
-                    message = WebDriverWait(self.driver, 60, 3, None).until(
-                        EC.presence_of_element_located(self.import_success_message))
-                    tips = message.text
+                    # webdriver显示等待：webElementWait
+                    tips = webElementWait(self.driver, By.XPATH, self.import_success_message)
+
                     self.logger.info(self.module_name + '-->' + text + ':' + tips)
                     time.sleep(1)
                     self.driver.find_element(*self.import_success_button).click()
                     time.sleep(1)
                     self.driver.find_element(*self.return_button).click()
                 except:
-                    # 错误截图
-                    name = sys._getframe().f_code.co_name
-                    get_window_img(self, self.logger, name, 1)  # 最后一项为图片第几张
-
                     self.logger.warning(self.module_name + self.error_message)
-                    self.driver.get(self.readConfig.f5_url)
+                    # 页面刷新到首页
+                    go_Homepage(self.driver)
         else:
             pass
 
@@ -104,19 +95,15 @@ class WqImport(object):
         if iee.is_element_exist(By.PARTIAL_LINK_TEXT, self.import_text):
             elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT, self.import_text)
             number = len(elements)
-            print(number)
-            print(number)
-            print(number)
-
             for self.id in range(number):
                 elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT, self.import_text)
                 text = elements[self.id].text
                 elements[self.id].click()
                 time.sleep(2)
-                try:
-                    self.driver.switch_to.frame(self.iframe_name)
-                except:
-                    pass
+
+                # iframe跳转
+                iframe_skip.iframe_enter(self.driver)
+
                 try:
                     if number == 1:
                         import_file = self.file_path + self.module_name + '.xls'
@@ -125,21 +112,18 @@ class WqImport(object):
                     self.driver.find_element(*self.import_file_button1).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button1).click()
-                    # webdriver 显示等待：WebDriverWait
-                    message = WebDriverWait(self.driver, 60, 3, None).until(
-                        EC.presence_of_element_located(self.import_success_message))
-                    tips = message.text
+
+                    # webdriver 显示等待：webElementWait
+                    tips = webElementWait(self.driver, By.XPATH, self.import_success_message)
+
                     self.logger.info(self.module_name + '-->' + text + ':' + tips)
                     time.sleep(1)
                     self.driver.find_element(*self.import_success_button).click()
                     time.sleep(1)
                     self.driver.find_element(*self.return_button).click()
                 except:
-                    # 错误截图
-                    name = sys._getframe().f_code.co_name
-                    get_window_img(self, self.logger, name, 1)  # 最后一项为图片第几张
-
                     self.logger.warning(self.module_name + self.error_message)
-                    self.driver.get(self.readConfig.f5_url)
+            #页面刷新到首页
+            go_Homepage(self.driver)
         else:
             pass
