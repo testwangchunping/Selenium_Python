@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="2b1cc9ff-961d-4a1a-a5c5-793adc3483a3" name="Default Changelist" comment="调整目录结构" />
+=======
+    <list default="true" id="2b1cc9ff-961d-4a1a-a5c5-793adc3483a3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+>>>>>>> branch1
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,45 +59,46 @@
     <session id="423489546">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.59" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
           <entry key="ini" value="497" />
-          <entry key="py" value="1221" />
-          <entry key="txt" value="58" />
+          <entry key="py" value="1432" />
+          <entry key="txt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="497" />
-          <entry key="PLAIN_TEXT" value="64" />
-          <entry key="Python" value="1221" />
+          <entry key="PLAIN_TEXT" value="107" />
+          <entry key="Python" value="1432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="3" />
-          <entry key="ini" value="12" />
+          <entry key="html" value="4" />
+          <entry key="ini" value="14" />
           <entry key="jpg" value="2" />
-          <entry key="log" value="10" />
-          <entry key="py" value="247" />
+          <entry key="log" value="11" />
+          <entry key="py" value="260" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="3" />
+          <entry key="HTML" value="4" />
           <entry key="Image" value="2" />
-          <entry key="Ini" value="12" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="Python" value="247" />
+          <entry key="Ini" value="14" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="260" />
         </counts>
       </usages-collector>
     </session>
@@ -186,12 +193,13 @@
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_table.py" />
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_navigate.py" />
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/config/config.ini" />
-        <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py" />
-        <option value="$PROJECT_DIR$/WaiQin/testcase/test_export.py" />
         <option value="$PROJECT_DIR$/WaiQin/testcase/test_import.py" />
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/read_new_import.py" />
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/read_old_export.py" />
         <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/read_old_import.py" />
+        <option value="$PROJECT_DIR$/WaiQin/test.py" />
+        <option value="$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py" />
+        <option value="$PROJECT_DIR$/WaiQin/testcase/test_export.py" />
       </list>
     </option>
   </component>
@@ -202,8 +210,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="99" />
-    <option name="y" value="299" />
+    <option name="x" value="33" />
+    <option name="y" value="374" />
     <option name="width" value="1400" />
     <option name="height" value="776" />
   </component>
@@ -261,7 +269,7 @@
   <component name="PropertiesComponent">
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="H:/demo" />
+    <property name="last_opened_file_path" value="H:/wq" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -300,6 +308,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WaiQin/runtest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Selenium_Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WaiQin" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/WaiQin/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -356,10 +386,12 @@
       <item itemvalue="Python.runtest" />
       <item itemvalue="Python.test_dir" />
       <item itemvalue="Python.test_dir (1)" />
+      <item itemvalue="Python.test" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.runtest" />
+        <item itemvalue="Python.test" />
         <item itemvalue="Python.test_dir (1)" />
         <item itemvalue="Python.test_dir" />
       </list>
@@ -397,7 +429,21 @@
       <option name="project" value="LOCAL" />
       <updated>1539944747441</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改读取excel的方法，nav/tab">
+      <created>1540201512203</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1540201512203</updated>
+    </task>
+    <task id="LOCAL-00005" summary="优化wq_import方法">
+      <created>1540259814078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540259814078</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -408,7 +454,7 @@
       <window_info id="Favorites" order="2" sideWeight="0.097165994" side_tool="true" weight="0.1600257" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25236169" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" weight="0.82726043" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.51012146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29554656" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -435,156 +481,13 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改了定位方式--find_element 以及 is_element_exist" />
     <MESSAGE value="调整目录结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="调整目录结构" />
+    <MESSAGE value="修改读取excel的方法，nav/tab" />
+    <MESSAGE value="优化wq_import方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化wq_import方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/testcase/test_import.py</url>
-          <line>39</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>92</line>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>93</line>
-          <option name="timeStamp" value="26" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="27" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>96</line>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>95</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>97</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>98</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>99</line>
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>100</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>104</line>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>107</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>108</line>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>110</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>109</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>111</line>
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>112</line>
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>113</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>116</line>
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>118</line>
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>120</line>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>121</line>
-          <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>122</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>123</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>124</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>127</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py</url>
-          <line>128</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/WaiQin/frame/iframe_skip.py</url>
           <line>1</line>
@@ -730,21 +633,6 @@
           <line>27</line>
           <option name="timeStamp" value="83" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/testcase/test_import.py</url>
-          <line>51</line>
-          <option name="timeStamp" value="95" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/testcase/test_import.py</url>
-          <line>52</line>
-          <option name="timeStamp" value="96" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/WaiQin/testcase/test_import.py</url>
-          <line>53</line>
-          <option name="timeStamp" value="97" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -753,13 +641,6 @@
     <entry file="file://$PROJECT_DIR$/WaiQin/Report/2018-10-18Report.html" />
     <entry file="file://$PROJECT_DIR$/WaiQin/Screenshots/test_old_import1.jpg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/page_object/login_page.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="73" lean-forward="true" selection-start-line="1" selection-start-column="73" selection-end-line="1" selection-end-column="73" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
@@ -785,13 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/test_dir.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="16" lean-forward="true" selection-start-line="8" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/frame/browser_engine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -799,6 +673,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/export.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1704">
@@ -813,6 +688,8 @@
         </state>
       </provider>
     </entry>
+=======
+>>>>>>> branch1
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/juge_old_export.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -849,7 +726,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 105820.log" />
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/WaiQin/Report/2018-10-22Report.html" />
+=======
+    <entry file="file://$PROJECT_DIR$/WaiQin/Report/2018-10-22Report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+>>>>>>> branch1
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/相关说明.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -859,6 +742,7 @@
     <entry file="file://$PROJECT_DIR$/WaiQin/Screenshots/test_new_export1.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_navigate.py" />
     <entry file="file://$PROJECT_DIR$/WaiQin/runtest.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -866,14 +750,32 @@
           <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
           <folding>
             <element signature="e#15#73#0" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_navigate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_table.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+>>>>>>> branch1
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/change_table.py" />
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/20181018160645.log">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+=======
+>>>>>>> branch1
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 164351.log" />
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 162334.log" />
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 162123.log" />
@@ -883,47 +785,18 @@
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 163628.log" />
     <entry file="file://$PROJECT_DIR$/WaiQin/Logs/2018-10-22 162842.log" />
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/read_config.py">
+<<<<<<< HEAD
+=======
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="32" column="24" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/config.ini">
+    <entry file="file://$PROJECT_DIR$/WaiQin/frame/iframe_skip.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/frame/iframe_skip.py" />
-    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1340">
-          <caret line="92" column="8" selection-start-line="92" selection-start-column="8" selection-end-line="92" selection-end-column="8" />
-          <folding>
-            <element signature="e#15#24#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/testcase/test_import.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/WaiQin/testcase/test_export.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="57" column="82" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="57" selection-end-column="82" />
-          <folding>
-            <element signature="e#15#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
@@ -931,6 +804,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
           <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+          <folding>
+            <element signature="e#15#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -938,20 +814,150 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="566">
           <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+          <folding>
+            <element signature="e#15#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/read_new_import.py">
+>>>>>>> branch1
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="916">
           <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+          <folding>
+            <element signature="e#15#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/os_rows_process.py" />
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/js_rows_process.py" />
+    <entry file="file://$PROJECT_DIR$/WaiQin/Logs/20181018160645.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/data_process/read_new_export.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="173">
+          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/frame/iframe_skip.py" />
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py">
+=======
+        <state relative-caret-position="1491">
+          <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+          <folding>
+            <element signature="e#15#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/export.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/test_dir.py">
+>>>>>>> branch1
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="8" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/login.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/page_object/login_page.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="541">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+=======
+        <state relative-caret-position="2416">
+          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+          <folding>
+            <element signature="e#15#24#0" expanded="true" />
+          </folding>
+>>>>>>> branch1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="566">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+=======
+        <state relative-caret-position="25">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+>>>>>>> branch1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/testcase/test_export.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="916">
+          <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+=======
+        <state relative-caret-position="515">
+          <caret line="57" column="84" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="57" selection-end-column="84" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+>>>>>>> branch1
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/testcase/test_import.py">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="516">
           <caret line="60" column="25" lean-forward="true" selection-start-line="60" selection-start-column="25" selection-end-line="60" selection-end-column="25" />
+=======
+        <state relative-caret-position="365">
+          <caret line="52" column="60" lean-forward="true" selection-start-line="52" selection-start-column="60" selection-end-line="52" selection-end-column="60" />
+          <folding>
+            <element signature="e#15#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/Report/2018-10-23Report.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/runtest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#15#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/config.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+>>>>>>> branch1
         </state>
       </provider>
     </entry>
