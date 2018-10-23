@@ -53,31 +53,34 @@ class WqImport(object):
 
                 # iframe跳转
                 iframe_skip.iframe_enter(self.driver)
-
+                #判断导入文件类型
                 try:
-                    if number == 1:
-                        import_file = self.file_path + self.module_name + '.xls'
-                    else:
-                        import_file = self.file_path + self.module_name + str(self.id + 1) + '.xls'
+                    filetext = self.driver.find_element(By.XPATH, '//*[@id="adminForm"]/div[2]/div[1]').text
+                except:
+                    filetext = self.driver.find_element(By.XPATH, '//*[@id="upfile_form"]/div[2]/div[1]').text
+                    # 文件类型
+                if 'Excel' in filetext:
+                    filetype = '.xls'
+                else:
+                    filetype = '.zip'
+                # 获取待导入文件
+                if number == 1:
+                    import_file = self.file_path + self.module_name + filetype
+                else:
+                    import_file = self.file_path + self.module_name + str(self.id + 1) + filetype
+                try:
+                    #xls类型文件上传
                     self.driver.find_element(*self.import_file_button1).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button1).click()
                 except:
-                    pass
-                try:
-                    if number == 1:
-                        import_file = self.file_path + self.module_name + '.zip'
-                    else:
-                        import_file = self.file_path + self.module_name + str(self.id + 1) + '.zip'
+                    #zip类型文件上传
                     self.driver.find_element(*self.import_file_button2).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button2).click()
-                except:
-                    pass
                 try:
                     # webdriver显示等待：webElementWait
                     tips = webElementWait(self.driver, By.XPATH, self.import_success_message)
-
                     self.logger.info(self.module_name + '-->' + text + ':' + tips)
                     time.sleep(1)
                     self.driver.find_element(*self.import_success_button).click()
