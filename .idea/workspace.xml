@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b1cc9ff-961d-4a1a-a5c5-793adc3483a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaiQin/Screenshots/test_new_import1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/WaiQin/Screenshots/test_new_import1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaiQin/Screenshots/test_old_import2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/WaiQin/Screenshots/test_old_import2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaiQin/src/wq_import_export/service/wq_import.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WaiQin/testcase/test_export.py" beforeDir="false" afterPath="$PROJECT_DIR$/WaiQin/testcase/test_export.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,13 +68,13 @@
           <entry key="dummy" value="6" />
           <entry key="ini" value="497" />
           <entry key="py" value="1432" />
-          <entry key="txt" value="86" />
+          <entry key="txt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Ini" value="497" />
-          <entry key="PLAIN_TEXT" value="92" />
+          <entry key="PLAIN_TEXT" value="107" />
           <entry key="Python" value="1432" />
         </counts>
       </usages-collector>
@@ -111,7 +107,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/config.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="535">
+            <state relative-caret-position="173">
               <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
             </state>
           </provider>
@@ -258,42 +254,7 @@
               <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
               <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
               <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="Report" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wq_import_export" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wq_import_export" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="wq_import_export" type="462c0819:PsiDirectoryNode" />
-              <item name="data_process" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Selenium_Python" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Selenium_Python" type="462c0819:PsiDirectoryNode" />
-              <item name="WaiQin" type="462c0819:PsiDirectoryNode" />
-              <item name="testcase" type="462c0819:PsiDirectoryNode" />
+              <item name="Logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -471,19 +432,25 @@
       <option name="project" value="LOCAL" />
       <updated>1540201512203</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="优化wq_import方法">
+      <created>1540259814078</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1540259814078</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.902834" visible="true" weight="0.16195373" />
       <window_info id="Structure" order="1" sideWeight="0.50133336" side_tool="true" weight="0.18123393" />
       <window_info id="Favorites" order="2" sideWeight="0.097165994" side_tool="true" weight="0.1600257" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.25236169" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.10796221" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993573" visible="true" weight="0.51012146" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.29554656" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,7 +478,8 @@
     <MESSAGE value="修改了定位方式--find_element 以及 is_element_exist" />
     <MESSAGE value="调整目录结构" />
     <MESSAGE value="修改读取excel的方法，nav/tab" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改读取excel的方法，nav/tab" />
+    <MESSAGE value="优化wq_import方法" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化wq_import方法" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -919,7 +887,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WaiQin/src/wq_import_export/config/config.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="535">
+        <state relative-caret-position="173">
           <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
         </state>
       </provider>
