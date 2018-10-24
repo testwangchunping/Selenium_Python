@@ -33,7 +33,7 @@ class Logger(object):
         # 再创建一个handler，用于输出到控制台
         ch = logging.StreamHandler()
         # 设置指定日志的最低输出级别，默认为WARN级别
-        ch.setLevel(logging.INFO)
+        ch.setLevel(logging.DEBUG)
         # 设置输出格式
         ch.setFormatter(formatter)
 
