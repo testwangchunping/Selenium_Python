@@ -4,8 +4,8 @@ from WaiQin.frame.iframe_skip import iframe_skip
 from WaiQin.frame.is_element_exist import IsElementExist
 
 
-# 偶数行数据处理
-# 偶数行后切换iframe
+# 导航栏数据处理
+# 导航栏切换iframe
 def change_navigate(module_list, driver):
     module_name = ''
     iee = IsElementExist(driver)
