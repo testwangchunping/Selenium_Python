@@ -16,7 +16,7 @@ report_title = '项目导入导出测试报告'
 # 设置报告副标题
 report_descibe = '用例测试情况'
 # 获取系统当前时间
-now = time.strftime("%Y-%m-%d", time.localtime(time.time()))
+now = time.strftime("%Y-%m-%d %H:%m", time.localtime(time.time()))
 # 设置报告名称格式
 HtmlFile = report_path + now + report_name
 # 通过open()方法以二进制写模式打开当前目录下的Report.html，如果没有，则自动创建该文件

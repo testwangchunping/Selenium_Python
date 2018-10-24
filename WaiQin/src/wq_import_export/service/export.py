@@ -105,7 +105,6 @@ class Export(object):
                     try:
                         # webdriver显示等待：webElementWait
                         tips = webElementWait(self.driver, By.XPATH, self.new_export_success_message)
-
                         self.logger.info(module_name + '-->' + text + ':' + tips)
                         self.driver.find_element(*self.new_close_export_window).click()
                     except:
@@ -140,7 +139,6 @@ class Export(object):
                 try:
                     # webdriver显示等待：webElementWait
                     tips = webElementWait(self.driver, By.XPATH, self.new_export_success_message)
-
                     self.logger.info(module_name + '-->' + text + ':' + tips)
                     self.driver.find_element(*self.new_close_export_window).click()
                 except:

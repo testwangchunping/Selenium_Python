@@ -21,7 +21,10 @@ class ReadNewImport(object):
         file_path = self.readConfig.port_data_filepath
         sheet_name = self.readConfig.new_import_sheet
         # 打开excel文件的具体sheet
-        DataSheet = open_excel(file_path, sheet_name)
+        try:
+            DataSheet = open_excel(file_path, sheet_name)
+        except:
+            self.logger.debug('导入导出配置文件不存在！')
         # sheet行数
         rowNum = DataSheet.nrows
         for i in range(rowNum):

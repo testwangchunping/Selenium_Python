@@ -2,7 +2,6 @@
 from WaiQin.frame.go_homepage import go_Homepage
 from WaiQin.frame.delete_blank import delete_blank
 from WaiQin.frame.open_excel import open_excel
-from WaiQin.frame.iframe_skip import iframe_skip
 from WaiQin.src.wq_import_export.data_process.change_navigate import change_navigate
 from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 from WaiQin.src.wq_import_export.data_process.change_table import change_table
@@ -21,7 +20,10 @@ class ReadOldExport(object):
         file_path = self.readConfig.port_data_filepath
         sheet_name = self.readConfig.old_export_sheet
         # 打开excel文件的具体sheet
-        DataSheet = open_excel(file_path, sheet_name)
+        try:
+            DataSheet = open_excel(file_path, sheet_name)
+        except:
+            self.logger.debug('导入导出配置文件不存在！')
         # sheet行数
         rowNum = DataSheet.nrows
         for i in range(rowNum):

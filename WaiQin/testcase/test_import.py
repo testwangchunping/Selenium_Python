@@ -32,13 +32,13 @@ class TestImport(unittest.TestCase):
         未重构模块导入
          """
 
-        self.logger.info('开始导出了--------------old_import')
+        self.logger.info('开始导入--------------old_import')
         ReadOldImport(self.driver, self.logger).read_old_import()
-        self.logger.info('结束导出了--------------old_import')
+        self.logger.info('结束导入--------------old_import')
 
-        self.logger.info('开始导出了--------------old_import1')
+        self.logger.info('开始导入--------------old_import1')
         ReadOldImport(self.driver, self.logger).read_old_import1()
-        self.logger.info('结束导出了--------------old_import1')
+        self.logger.info('结束导入--------------old_import1')
 
         # 截图
         name = sys._getframe().f_code.co_name
@@ -49,13 +49,13 @@ class TestImport(unittest.TestCase):
         """
         重构模块导入
         """
-        self.logger.info('开始导出了--------------new_import')
+        self.logger.info('开始导入--------------new_import')
         ReadNewImport(self.driver, self.logger).read_new_import()
-        self.logger.info('结束导出了--------------new_import')
+        self.logger.info('结束导入--------------new_import')
 
-        self.logger.info('开始导出了--------------new_import1')
+        self.logger.info('开始导入--------------new_import1')
         ReadNewImport(self.driver, self.logger).read_new_import1()
-        self.logger.info('结束导出了--------------new_import1')
+        self.logger.info('结束导入--------------new_import1')
 
         # 截图
         name = sys._getframe().f_code.co_name

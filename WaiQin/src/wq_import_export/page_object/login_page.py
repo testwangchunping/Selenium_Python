@@ -30,6 +30,7 @@ class LoginPage(object):
         try:
             # webdriver显示等待：webElementWait
             tips = webElementWait(self.driver, By.CLASS_NAME, self.error_tips)
-            self.logger.warning(tips)
+            self.logger.debug(tips)
+            self.logger.info('登陆失败')
         except:
             pass
