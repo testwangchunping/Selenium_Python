@@ -53,7 +53,7 @@ class WqImport(object):
 
                 # iframe跳转
                 iframe_skip.iframe_enter(self.driver)
-                #判断导入文件类型
+                # 判断导入文件类型
                 try:
                     filetext = self.driver.find_element(By.XPATH, '//*[@id="adminForm"]/div[2]/div[1]').text
                 except:
@@ -69,12 +69,12 @@ class WqImport(object):
                 else:
                     import_file = self.file_path + self.module_name + str(self.id + 1) + filetype
                 try:
-                    #xls类型文件上传
+                    # xls类型文件上传
                     self.driver.find_element(*self.import_file_button1).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button1).click()
                 except:
-                    #zip类型文件上传
+                    # zip类型文件上传
                     self.driver.find_element(*self.import_file_button2).send_keys(import_file)
                     time.sleep(2)
                     self.driver.find_element(*self.confirm_button2).click()
@@ -126,7 +126,7 @@ class WqImport(object):
                     self.driver.find_element(*self.return_button).click()
                 except:
                     self.logger.warning(self.module_name + self.error_message)
-            #页面刷新到首页
+            # 页面刷新到首页
             go_Homepage(self.driver)
         else:
             pass

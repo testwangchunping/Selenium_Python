@@ -14,6 +14,9 @@ class LoginPage(object):
     login_button = (By.CLASS_NAME, 'login_btn')
     readConfig = ReadConfigFile()
 
+    def get_url(self):
+        self.driver.get(self.readConfig.login_url)
+
     def input_company(self):
         self.driver.find_element(*self.company_name).send_keys(self.readConfig.U_company)
 

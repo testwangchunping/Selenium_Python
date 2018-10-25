@@ -1,7 +1,6 @@
 # _*_ coding: utf-8 _*_
 import logging
 from WaiQin.frame.get_time import GetTime
-from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 
 
 class Logger(object):
@@ -15,13 +14,12 @@ class Logger(object):
         self.logger = logging.getLogger(logger)
         self.logger.setLevel(logging.DEBUG)
 
-        readConfig = ReadConfigFile()
         # 定义handler的输出格式
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
         # 定义写入日志文件的位置和日志文件名
         rq = GetTime().get_system_time()
-        log_name = readConfig.log_path + rq + '.log'
+        log_name = './Logs/' + rq + '.log'
 
         # 创建一个handler，用于输出到文件
         fh = logging.FileHandler(log_name, encoding='utf-8')

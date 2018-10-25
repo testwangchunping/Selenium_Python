@@ -1,7 +1,6 @@
-#coding=utf-8
+# coding=utf-8
 import os
 from selenium import webdriver
-from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 
 
 class BrowserEngine(object):
@@ -9,14 +8,13 @@ class BrowserEngine(object):
     定义一个浏览器引擎类，跟进browser_type的值，控制启动不同的浏览器，主要是IE,Firefox，Chrome
     """
     # 读取驱动路径
-    readConfig= ReadConfigFile()
-    chrome_path = os.path.abspath('.') + readConfig.chromedriver_path
-    fire_path = os.path.abspath('.') + readConfig.firefoxdriver_path
-    ie_path = os.path.abspath('.') + readConfig.iedriver_path
+    chrome_path = '.'+'/Tools/chromedriver.exe'
+    fire_path = '.'+'/Tools/geckodriver.exe'
+    ie_path = '.'+'/Tools/IEDriver.exe'
 
     driver = None
-    #读取打开的浏览器
-    browser_type = readConfig.browser_Type
+    # 读取打开的浏览器
+    browser_type = 'Chrome'
 
     def set_driver(self, driver):
         BrowserEngine.driver = driver
@@ -35,22 +33,4 @@ class BrowserEngine(object):
             driver = webdriver.Ie(self.ie_path)
         driver.maximize_window()
         driver.implicitly_wait(5)
-        driver.get(self.readConfig.login_url)
         return BrowserEngine().set_driver(driver)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

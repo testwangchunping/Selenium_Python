@@ -7,7 +7,6 @@ class ReadConfigFile(object):
     config = configparser.ConfigParser()
 
     config.read(file_path, encoding='utf-8-sig')
-    browser_Type = config.get('browserType', 'browserName')
     login_url = config.get('testUrl', 'login_url')
     f5_url = config.get('testUrl', 'f5_url')
 
@@ -31,10 +30,3 @@ class ReadConfigFile(object):
     old_import_sheet1 = config.get('filePath', 'old_import_sheet1')
 
     import_data_filepath = config.get('filePath', 'import_data_filepath')
-    img_path = config.get('filePath', 'img_path')
-    log_path = config.get('filePath', 'log_path')
-    report_path = config.get('filePath', 'report_path')
-    suites_path = config.get('filePath', 'suites_path')
-    chromedriver_path = config.get('filePath', 'chromedriver_path')
-    firefoxdriver_path = config.get('filePath', 'firefoxdriver_path')
-    iedriver_path = config.get('filePath', 'iedriver_path')

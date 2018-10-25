@@ -8,6 +8,7 @@ class TestLogin(object):
 
     def test_login(self):
         login_Page = LoginPage(self.driver, self.logger)
+        login_Page.get_url()
         login_Page.input_company()
         login_Page.input_account()
         login_Page.input_password()
