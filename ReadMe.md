@@ -53,12 +53,10 @@ Selenium_Python
                   c、有table项+1个文件：当前table项名称.xls  (例如：商品规格设置.xls)
                   d、有table项+多个文件：当前table项名称+当前导入文件序号+.xls (例如：xxxx1.xls,xxxx2.xls)
        文件内容：
-                  当前系统导入模板111
+                  当前系统导入模板
                   
  
- 
- 
- 
+
  
  
  

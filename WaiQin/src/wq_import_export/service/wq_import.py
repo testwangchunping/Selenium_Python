@@ -80,7 +80,9 @@ class WqImport(object):
                     self.driver.find_element(*self.confirm_button2).click()
                 try:
                     # webdriver显示等待：webElementWait
-                    tips = webElementWait(self.driver, By.XPATH, self.import_success_message)
+                    webElementWait(self.driver, By.XPATH, self.import_success_message)
+                    tips = self.driver.find_element(By.ID, 'main-container').text
+
                     self.logger.info(self.module_name + '-->' + text + ':' + tips)
                     time.sleep(1)
                     self.driver.find_element(*self.import_success_button).click()
@@ -117,7 +119,8 @@ class WqImport(object):
                     self.driver.find_element(*self.confirm_button1).click()
 
                     # webdriver 显示等待：webElementWait
-                    tips = webElementWait(self.driver, By.XPATH, self.import_success_message)
+                    webElementWait(self.driver, By.XPATH, self.import_success_message)
+                    tips = self.driver.find_element(By.ID, 'main-container').text
 
                     self.logger.info(self.module_name + '-->' + text + ':' + tips)
                     time.sleep(1)
