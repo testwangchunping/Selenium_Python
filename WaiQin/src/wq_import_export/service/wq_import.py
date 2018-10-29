@@ -24,6 +24,7 @@ class WqImport(object):
     readConfig = ReadConfigFile()
     file_path = os.path.abspath('.') + readConfig.import_data_filepath
     # 导入按钮
+    more_select_box = 'more-select-box'  #客户管理组合导入按钮
     import_text = '导入'
 
     # 文件上传按钮
@@ -97,6 +98,11 @@ class WqImport(object):
 
     def test_new_import(self):
         iee = IsElementExist(self.driver)
+        #待修改——————————————
+        if iee.is_element_exist(By.CLASS_NAME, self.more_select_box):
+            self.driver.find_element(By.CLASS_NAME, self.more_select_box).click()
+        else:
+            pass
         if iee.is_element_exist(By.PARTIAL_LINK_TEXT, self.import_text):
             elements = self.driver.find_elements(By.PARTIAL_LINK_TEXT, self.import_text)
             number = len(elements)
