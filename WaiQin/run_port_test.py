@@ -1,8 +1,22 @@
 # coding=utf-8
-from WaiQin.Tools.HTMLTestRunner_PY3 import HTMLTestRunner
+import sys
+
+# sys.path.append('H:\\Selenium_Python\\WaiQin')
+# sys.path.append('H:\\Selenium_Python\\WaiQin\\Tools\\HTMLTestRunner_PY3')
+# sys.path.append('H:\\Selenium_Python\\WaiQin\\src\\wq_import_export\\config')
+# sys.path.append('C:\\Windows\\SYSTEM32\\python34.zip')
+# sys.path.append('G:\\Python\\DLLs')
+# sys.path.append('G:\\Python\\lib')
+# sys.path.append('G:\\Python')
+# sys.path.append('G:\\Python\\lib\\site-packages')
+
 from WaiQin.src.wq_import_export.config.read_config import ReadConfigFile
 import time
 import unittest
+from WaiQin.Tools.HTMLTestRunner_PY3 import HTMLTestRunner
+
+
+# print(sys.path)
 
 readConfig = ReadConfigFile()
 # 设置报告文件保存路径
@@ -24,7 +38,7 @@ fp = open(HtmlFile, "wb")
 
 # discover找到指定目录下所有测试模块，并可递归查到子目录下的测试模块，只有匹配到的文件才能被加载
 # 跑testsuite包下所有测试用例,在实际脚本开发过程中，最后都采用这个方法来批量管理和执行几百上千的测试用例
-suite = unittest.TestLoader().discover(suites_path, pattern='test_im*.py')
+suite = unittest.TestLoader().discover(suites_path, pattern='test*.py')
 
 if __name__ == '__main__':
     # 执行用例
