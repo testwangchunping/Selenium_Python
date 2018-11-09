@@ -54,12 +54,14 @@ class Add_Module_Field(object):
                                      self.config.MultiselectMessage2)
                 self.logger.debug('添加多选-同级字段')
 
-                # add.add_special_select_field('select', self.config.SpecialselectMessage)
-                # self.logger.debug('添加单选-多级字段')
-                #
-                # add.add_special_select_field('multiselect', self.config.SpecialmultselectMessage)
-                # self.logger.debug('添加多选-多级字段')
+                '''
+                add.add_special_select_field('select', self.config.SpecialselectMessage)
+                self.logger.debug('添加单选-多级字段')
 
+                add.add_special_select_field('multiselect', self.config.SpecialmultselectMessage)
+                self.logger.debug('添加多选-多级字段')
+
+                '''
                 add.add_common_field('date', self.config.DateMessage)
                 self.logger.debug('添加日期字段')
 

@@ -10,7 +10,7 @@ def change_table(mlist, i, driver):
     if element:
         driver.find_element(By.LINK_TEXT, module_name).click()
     else:
-        print('tab栏' + module_name + '不存在！')
+        print('tab栏' + module_name + '不存在或配置错误！')
 
     # 重构后模块tab后有iframe切换
     iframe_skip.iframe_enter(driver)

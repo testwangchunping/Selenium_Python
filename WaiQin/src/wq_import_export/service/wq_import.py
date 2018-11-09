@@ -67,20 +67,18 @@ class WqImport(object):
         except:
             # zip类型文件上传
             self.driver.find_element(*self.import_file_button2).send_keys(import_file)
-            time.sleep(2)
+            time.sleep(10)
             self.driver.find_element(*self.confirm_button2).click()
         try:
             # webdriver显示等待：webElementWait
             webElementWait(self.driver, By.XPATH, self.import_success_message)
             tips = self.driver.find_element(By.ID, 'main-container').text
-
             self.logger.info(self.module_name + '-->' + import_content + ':' + tips)
-            time.sleep(1)
             self.driver.find_element(*self.import_success_button).click()
-            time.sleep(1)
             self.driver.find_element(*self.return_button).click()
         except:
             self.logger.warning(self.module_name + '-->' + import_content + ':' + self.error_message)
+            self.driver.find_element(*self.import_success_button).click()
 
     def test_old_import(self):
         iee = IsElementExist(self.driver)
@@ -94,8 +92,6 @@ class WqImport(object):
                 element[self.id].click()
                 time.sleep(2)
                 self.import_back(number, import_content)
-            # 页面刷新到首页
-            go_Homepage(self.driver)
         else:
             pass
 
@@ -116,8 +112,6 @@ class WqImport(object):
                 import_content = element[self.id].text
                 element[self.id].click()
                 self.import_back(number, import_content)
-            # 页面刷新到首页
-            go_Homepage(self.driver)
         else:
             pass
         # 单个导入按钮
@@ -130,7 +124,5 @@ class WqImport(object):
                 element[self.id].click()
                 time.sleep(2)
                 self.import_back(number, import_content)
-            # 页面刷新到首页
-            go_Homepage(self.driver)
         else:
             pass
